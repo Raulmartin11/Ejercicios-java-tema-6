@@ -11,17 +11,16 @@ import java.util.Scanner;
 public class Ejercicio06 {
 	public static void main(String[] args) {
 		
-		int NumeroAleatorio,i,numeroIntroducido = 0;
+		int NumeroAleatorio,i,numeroIntroducido;
 		boolean nAleatorio = false;
 		
 		Scanner S = new Scanner(System.in);
 		NumeroAleatorio = (int)(Math.random()*100);
 		
-		System.out.println(NumeroAleatorio);
 		
 		
 		
-		for(i = 5; i > 0; i--) {
+		for(i = 5; i >= 0; i--) {
 			if(nAleatorio == false) {
 				
 				System.out.print("Adivina el numero ");
@@ -29,17 +28,19 @@ public class Ejercicio06 {
 				if(NumeroAleatorio == numeroIntroducido) {
 					nAleatorio = true;
 				}
-				if((NumeroAleatorio < numeroIntroducido) && (i > 0)) {
-					System.out.println("El numero introducido es mayor");
+				if((NumeroAleatorio < numeroIntroducido)) {
+					System.out.println("El numero es menor");
 					System.out.println("\nTe quedan: "+ i +" intentos");
 				} else if(NumeroAleatorio > numeroIntroducido) {
-					System.out.println("El numero introducido es menor");
+					System.out.println("El numero es mayor");
 					System.out.println("\nTe quedan: "+ i +" intentos");
 				}
 			}
 		}
 		if(nAleatorio) {
 			System.out.println("Bien hecho!!!");
+		} else {
+			System.out.println("Eres la deshonra de tu familia");
 		}
 	}
 }

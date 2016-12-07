@@ -8,12 +8,14 @@
 	public static void main(String[] args) {
 		//CAMBIALO QUE TE HAS CONFUNDIDO MACHOTE
 		int matrix;
-		System.out.println("resultados\n");
-		for(int lns = 0; lns <40; lns++) {
+		int linea;
+		for(int lns = 0; lns <10; lns++) {
 			
-			for(int columnas = 0; columnas < 40; columnas++) {
+			linea = (int)(Math.random()*41)+1;
+			matrix = (int)(Math.random()*6);
+			for(int n = 0; n < linea; n++) {
 				
-				matrix = (int)(Math.random()*6);
+				
 				if(matrix == 0) {
 					System.out.print("* ");
 				}

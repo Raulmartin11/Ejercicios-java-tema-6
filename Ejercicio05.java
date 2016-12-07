@@ -8,10 +8,21 @@ de esos números.
 
 public class Ejercicio05 {
 	public static void main(String[] args) {
-		
+		int maximo = 0;
+		int minimo = 200;
+		int media = 0;
+		int aux,aleatorio;
 		for(int i = 0; i < 50; i++) {
-			
-			System.out.print(" " + (int)((Math.random()*100)+ 100));
+			aleatorio = (int)((Math.random()*100)+ 100);
+			System.out.print(" " + aleatorio);
+			aux = aleatorio;
+			if(aux > maximo) {
+				maximo = aux;
+			} else if(aux < minimo) {
+				minimo = aux;
+			}
+			media += aleatorio;
 		}
+		System.out.print("\nEl maximo es "+ maximo +", el minimo es "+ minimo +" y la media es "+ media/50);
 	}
 }
